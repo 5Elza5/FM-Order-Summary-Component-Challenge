@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  background: url(/images/pattern-background-desktop.svg) transparent no-repeat;
+  background-size: 100%;
+  background-color: var(--Pale-blue);
+}
+main {
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+.wrapper {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px 0 hsla(224, 23%, 55%, 0.432);
+  width: 450px;
+  margin: auto;
+}
+
+.hero img {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  inline-size: 100%;
+}
+
+.content {
+  inline-size: 355px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Description Section */
+
+.description h2 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.description p {
+  line-height: 30px;
+  color: var(--Desaturated-blue);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Price Section */
+
+.price-container {
+  border-radius: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: hsl(225, 100%, 98%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.img-and-price {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.price-container span {
+  color: var(--Desaturated-blue);
+}
+.price-container a {
+  color: var(--Bright-blue);
+}
+.price-container a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+/* Buttons */
+
+.btn {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-payment {
+  background-color: var(--Bright-blue);
+  box-shadow: 0px 2px 20px 0px hsl(224, 23%, 55%);
+  color: #fff;
+}
+.btn-payment:hover {
+  opacity: 0.7;
+}
+.btn-cancel {
+  background-color: transparent;
+  color: var(--Desaturated-blue);
+}
+.btn-cancel:hover {
+  color: var(--Dark-blue);
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.attribution a:hover {
+  color: blue;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 490px) {
+  body {
+    background: url(/images/pattern-background-mobile.svg) transparent no-repeat;
+    background-size: 100%;
+    background-color: var(--Pale-blue);
+  }
+  .wrapper {
+    width: 325px;
+  }
+  .content {
+    inline-size: 275px;
+  }
+}
